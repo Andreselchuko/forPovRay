@@ -1,0 +1,28 @@
+/*Uso de for en povray
+*permite repetir un número dado de veces
+*las mismas istrucciones*/
+/*For para multiplicar la esfera en x
+*las instrucciones en el for deben encerarrse
+*entre parentesis */
+#for (Posicion_x,0,9,1)
+//For para multiplicar la esfera en y
+#for (Posicion_y,0,4,1)
+//instrucciones
+sphere{
+//Localización y radio
+<-5+Posicion_x+avance_esfera,Posicion_y,0>, .5
+//Textura de la esfera
+texture{
+//Solo se usa pigmento
+pigment{
+//Color en RGB y transparencia del color
+color rgb<0,0,1>
+}
+//El acabado final y representa una propiedad de la reflexión de la luz
+finish{
+phong 1
+}
+}
+}
+#end //Para for en y
+#end //Para for en x
